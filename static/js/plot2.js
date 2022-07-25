@@ -167,10 +167,12 @@ d3.json(fireLocations).then(function(data) {
         var layoutStacked = {
             title: "Number of Fire Incidents by Cause",
             yaxis: {
-                text: "Number of Incidents"
+                text: "Number of Incidents",
+                title: 'Months'
             },
             xaxis: {
-                tickangle: -45
+                tickangle: -45,
+                title: 'Houra'
             },
             maring: {
                 l: 100,
