@@ -1,3 +1,3 @@
 # California Wildfire Study
-![Wildfire Image](Photo by Sippakorn Yamkasikorn from Pexels: https://www.pexels.com/photo/photo-of-wildfire-on-mountain-3552472/)
+![Wildfire Image](https://images.pexels.com/photos/3552472/pexels-photo-3552472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
 
