@@ -172,7 +172,7 @@ d3.json(fireLocations).then(function(data) {
             },
             xaxis: {
                 tickangle: -45,
-                title: 'Houra'
+                title: 'Hours'
             },
             maring: {
                 l: 100,
