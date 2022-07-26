@@ -10,8 +10,7 @@
 
 * Plot.ly
 * Javascript
-* HTML
-* CSS
+* HTML & CSS
 * D3.js
 * JSON
 * GitHub 
