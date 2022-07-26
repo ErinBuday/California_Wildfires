@@ -1,10 +1,10 @@
 fireLocations = "https://raw.githubusercontent.com/ErinBuday/Project-3/main/wildfiresCleaned2.json"
 
-function plot(data, year) {
-    var monthCounts = [0,0,0,0,0,0,0,0,0,0,0,0];
+function plot(year) {
+
+    d3.json(fireLocations).then(function(data) {
         var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
         var hourNames = ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"];
-        var fireCauseNames = ['Undetermined','Unknown','Human','Natural']
 
         var monthCountsUndetermined = [0,0,0,0,0,0,0,0,0,0,0,0];
         var monthCountsUnknown = [0,0,0,0,0,0,0,0,0,0,0,0];
@@ -15,6 +15,12 @@ function plot(data, year) {
         var hourCountsUnkown = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
         var hourCountsHuman = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
         var hourCountsNatural = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+        if (year === 0) {
+            var yearName = "All Years";
+        } else {
+            var yearName = year;
+        };
       
 
         
@@ -22,7 +28,7 @@ function plot(data, year) {
             
             var fireMonth = data.data[i][1][1] -1;
             var fireHour = data.data[i][1][0];
-            var fireYear = data.data[i][1][2]
+            var fireYear = data.data[i][1][2];
             var fireCause = data.data[i][0];
 
             if (year === 0) {        
@@ -39,7 +45,23 @@ function plot(data, year) {
                     monthCountsNatural[fireMonth] += 1;
                     hourCountsNatural[fireHour] += 1;
                 };
-            };
+            }; 
+
+            if (year === fireYear) {
+                if (fireCause === "Undetermined") {
+                    monthCountsUndetermined[fireMonth] += 1;
+                    hourCountsUndetermined[fireHour] += 1;
+                } else if (fireCause === "Unknown") {
+                    monthCountsUnknown[fireMonth] += 1;
+                    hourCountsUnkown[fireHour] += 1;
+                } else if (fireCause === "Human") {
+                    monthCountsHuman[fireMonth] += 1;
+                    hourCountsHuman[fireHour] += 1;
+                } else if (fireCause === "Natural") {
+                    monthCountsNatural[fireMonth] += 1;
+                    hourCountsNatural[fireHour] += 1;
+                };
+            }
         }
 
         var traceMonthUnknown = {
@@ -128,7 +150,7 @@ function plot(data, year) {
         var traceDataHourStacked = [traceHourUndetermined, traceHourUnknown, traceHourHuman, traceHourNatural];
 
         var layoutStackedMonths = {
-            title: "Number of Fire Incidents by Cause",
+            title: `Number of Fire Incidents by Cause (${yearName})`,
             yaxis: {
                 title: "Number of Incidents",
             },
@@ -147,7 +169,6 @@ function plot(data, year) {
         }
 
         var layoutStackedHours = {
-            title: "Number of Fire Incidents by Cause",
             yaxis: {
                 title: "Number of Incidents",
             },
@@ -163,21 +184,23 @@ function plot(data, year) {
             },
             barmode: "stack"
 
-        }
+        };
 
         Plotly.newPlot("firesByMonth", traceDataMonthStacked, layoutStackedMonths);
         Plotly.newPlot("firesByHour", traceDataHourStacked, layoutStackedHours);
-}
+        console.log("Graphs made");
+    });
+};
 
 
-d3.json(fireLocations).then(function(data) {
 
-    function init() {
+function init() {
+    plot(0)
+};
 
-        plot(data, 0);
+function optionChanged(value) {
+    year = parseInt(value)
+    plot(year)
+};
 
-    }
-   init()
-
-   
-});
+init();
