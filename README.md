@@ -12,6 +12,6 @@
 * GitHub 
 * Leaflet
 - - -
-## References
-National Interagency Fire Center (https://data-nifc.opendata.arcgis.com/datasets/nifc::wfigs-wildland-fire-locations-full-history/explore?location=0.000000%2C0.000000%2C2.63)
+## Data Links
+National Interagency Fire Center. Retrieved from: [https://data-nifc.opendata.arcgis.com/datasets/nifc::wfigs-wildland-fire-locations-full-history/explore?location=0.000000%2C0.000000%2C2.63](https://data-nifc.opendata.arcgis.com/datasets/nifc::wfigs-wildland-fire-locations-full-history/explore?location=0.000000%2C0.000000%2C2.63)
 
