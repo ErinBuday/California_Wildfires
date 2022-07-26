@@ -3,7 +3,7 @@
 - - -
 <img width="1130" alt="Screen Shot 2022-07-25 at 8 05 03 PM" src="https://user-images.githubusercontent.com/100361900/180897420-898db16b-b078-4226-84d9-4ca53348b98c.png">
 <img width="1124" alt="Screen Shot 2022-07-25 at 8 04 35 PM" src="https://user-images.githubusercontent.com/100361900/180897432-c8a21582-bad2-4cd6-a936-340ed8c9dc47.png">
-![image (1)](https://user-images.githubusercontent.com/100361900/180901160-6cfdb040-24ce-43c4-ae59-dc495707f982.png)
+![image](https://user-images.githubusercontent.com/100361900/180901223-d2e111dd-b5c2-487c-83e6-219dc346794e.png)
 
 ## Applications
 
