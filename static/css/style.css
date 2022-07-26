@@ -16,3 +16,31 @@
 .jumbotron > h1 {
     text-shadow: 1px 1px 2px black;
 }
+
+#map {
+width: 100%;
+position: inherited;
+height: 600px;
+margin:0;
+padding:0;
+border: 1px solid black;
+border-radius: 8px;
+}
+.legend {
+  padding: 10px;
+  font-family: Sanchez, serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #555;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.75;
+}
