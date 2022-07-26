@@ -93,25 +93,6 @@ function buildCharts(year) {
 
 };
 
-
-// FUNCTION #2 of 4
-function populateDemoInfo(year) {
-
-    var fireInfoBox = d3.select("#sample-metadata");
-
-    d3.json(//include data link).then(data => {
-        var metadata = data.metadata
-        var filteredMetadata = metadata.filter(//? => //? == //?)[0]
-
-        console.log(filteredMetadata)
-        Object.entries(filteredMetadata).forEach(([key, value]) => {
-            fireInfoBox.append("p").text(`${key}: ${value}`)
-        })
-
-
-    })
-}
-
 // FUNCTION #3 of 4
 function optionChanged(year) {
     console.log(year);
