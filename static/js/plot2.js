@@ -256,7 +256,14 @@ function init() {
         ];
 
         // Define Plot layout
-        var gauge_layout = { width: 500, height: 400, margin: { t: 0, b: 0 } };
+        var gauge_layout = { 
+            width: 400, 
+            height: 300, 
+            margin: { 
+                t: 0,
+                b: 0,
+                r:10,
+                l:10 } };
 
         if (fireGuageNumber === 1) {
             var fireRisk = "very low risk";
@@ -279,9 +286,9 @@ function init() {
             monthDescription = "In spring frequency of fires increases steadily."
         } else if (currentMonth < 8) {
             if (currentMonth === 6) {
-                monthDescription = "The summer sports the highes frequency of forest fires, peaking in July. Watch out on the 4th! The majority of naturaly occuring fires happen now."
+                monthDescription = "The summer sports the highest frequency of forest fires, peaking in July. Watch out on the 4th! The majority of naturally occuring fires happen now."
             } else {
-                monthDescription = "The summer sports the highes frequency of forest fires. The majority of naturaly occuring fires happen now."
+                monthDescription = "The summer sports the highes frequency of forest fires. The majority of naturally occurring fires happen now."
             }
         } else if (currentMonth < 10) {
             monthDescription = "The frequency of fires steadily declines throughout the fall."
