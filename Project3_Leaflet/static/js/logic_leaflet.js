@@ -139,6 +139,7 @@ d3.json(url).then(function(response) {
 
 
         var monthFeatures = response.features;
+	var radiusSize = 12
 
   	for(var i=0; i < monthFeatures.length; i++) {
 
@@ -187,7 +188,7 @@ d3.json(url).then(function(response) {
 						//fillColor: getColor(hours),
 						color: "rgb(0, 255, 127)",
 						weight: 0.5,
-						radius: getRadius(12)
+						radius: getRadius(radiusSize)
 					}).addTo(layers.HOURS_1_3);
 			}
 			else if (hours < 6) {
@@ -197,7 +198,7 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(173, 255, 0)",
                                                 weight: 1.5,
-                                                radius: getRadius(12)
+                                                radius: getRadius(radiusSize)
                                         }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
                                                 "</h3><hr><p>" + pstDate +
                                                 '<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
@@ -212,7 +213,7 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(0, 0, 255)",
                                                 weight: 1.5,
-                                                radius: getRadius(12)
+                                                radius: getRadius(radiusSize)
                                         }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
                                                 "</h3><hr><p>" + pstDate +
 						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
@@ -227,7 +228,7 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(255, 0, 0)",
                                                 weight: 1.5,
-                                                radius: getRadius(12)
+                                                radius: getRadius(radiusSize)
                                         }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
                                                 "</h3><hr><p>" + pstDate +
 						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
@@ -242,7 +243,7 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(0, 0, 0)",
                                                 weight: 1.5,
-                                                radius: getRadius(12)
+                                                radius: getRadius(radiusSize)
                                         }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
                                                 "</h3><hr><p>" + pstDate +
 						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
@@ -257,7 +258,7 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(0, 128, 0)",
                                                 weight: 1.5,
-                                                radius: getRadius(12)
+                                                radius: getRadius(radiusSize)
 					}).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
                                                 "</h3><hr><p>" + pstDate +
 						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
@@ -272,7 +273,7 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(107, 142, 35)",
                                                 weight: 1.5,
-                                                radius: getRadius(12)
+                                                radius: getRadius(radiusSize)
                                         }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
                                                 "</h3><hr><p>" + pstDate +
 						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
@@ -287,7 +288,7 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(150, 128, 114)",
                                                 weight: 4.5,
-                                                radius: getRadius(6)
+                                                radius: getRadius(radiusSize)
                                         }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
                                                 "</h3><hr><p>" + pstDate +
 						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
@@ -300,32 +301,31 @@ d3.json(url).then(function(response) {
 
                                 L.circle(
                                         [coordinates[1], coordinates[0]], {
-                                                fillOpacity: 0.2,
-                                                fillColor: getColor(months),
-                                                color: "black",
+                                                //fillOpacity: 0.2,
+                                                //fillColor: getColor(months),
+                                                //color: "black",
                                                 weight: 0.5,
-                                                radius: getRadius(12)
+                                                radius: getRadius(radiusSize)
                                         }).addTo(layers.MONTHS_1_3);
                         }
                         else if (months < 6) {
                                 L.circle(
                                         [coordinates[1], coordinates[0]], {
-                                                fillOpacity: 0.75,
-                                                fillColor: getColor(months),
-                                                color: "violet",
+                                                //fillOpacity: 0.75,
+                                                //fillColor: getColor(months),
+                                                //color: "violet",
                                                 weight: 1.5,
-                                                radius: getRadius(12)
+                                                radius: getRadius(radiusSize)
                                         }).addTo(layers.MONTHS_3_6);
 
                         }
                         else if (months < 9) {
                                 L.circle(
                                         [coordinates[1], coordinates[0]], {
-                                                fillOpacity: 0.25,
-                                                fillColor: getColor(months),
-                                                color: "blue",
+                                                //fillOpacity: 0.25,
+                                                //color: "blue",
                                                 weight: 1.5,
-                                                radius: getRadius(12)
+                                                radius: getRadius(radiusSize)
                                         }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
                                 		"</h3><hr><p>" + pstDate +
 						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
@@ -336,11 +336,11 @@ d3.json(url).then(function(response) {
                         else {
                                 L.circle(
                                         [coordinates[1], coordinates[0]], {
-                                                fillOpacity: 0.75,
-                                                fillColor: getColor(months),
-                                                color: "red",
+                                                //fillOpacity: 0.75,
+                                                //fillColor: getColor(months),
+                                                //color: "red",
                                                 weight: 2.5,
-                                                radius: getRadius(12)
+                                                radius: getRadius(radiusSize)
                                         }).addTo(layers.MONTHS_9_12);
 
                         }
