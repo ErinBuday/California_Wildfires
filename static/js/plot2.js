@@ -202,9 +202,6 @@ function init() {
         var currentMonth = currentTime.getMonth();
         var currentHour = currentTime.getHours();
 
-        var currentMonth = 0;
-        var currentHour = 10;
-
         var averageCount = data.data.length / 288;
         var fireGuageNumber = 0;
 
