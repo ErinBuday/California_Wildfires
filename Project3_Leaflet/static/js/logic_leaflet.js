@@ -187,7 +187,7 @@ d3.json(url).then(function(response) {
 						//fillColor: getColor(hours),
 						color: "rgb(0, 255, 127)",
 						weight: 0.5,
-						radius: getRadius(hours)
+						radius: getRadius(12)
 					}).addTo(layers.HOURS_1_3);
 			}
 			else if (hours < 6) {
@@ -197,8 +197,12 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(173, 255, 0)",
                                                 weight: 1.5,
-                                                radius: getRadius(hours)
-                                        }).addTo(layers.HOURS_3_6);
+                                                radius: getRadius(12)
+                                        }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
+                                                "</h3><hr><p>" + pstDate +
+                                                '<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
+						'<br>' + "Incident Name: " + monthFeatures[i].properties.IncidentName +
+                                                '<br>' + '[' + coordinates[1] + ', ' + coordinates[0] + ']' + "</p>").addTo(layers.HOURS_3_6);
 
                         }
 			else if (hours < 9) {
@@ -208,8 +212,12 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(0, 0, 255)",
                                                 weight: 1.5,
-                                                radius: getRadius(hours)
-                                        }).addTo(layers.HOURS_6_9);
+                                                radius: getRadius(12)
+                                        }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
+                                                "</h3><hr><p>" + pstDate +
+						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
+                                                '<br>' + "Incident Name: " + monthFeatures[i].properties.IncidentName +
+                                                '<br>' + '[' + coordinates[1] + ', ' + coordinates[0] + ']' + "</p>").addTo(layers.HOURS_6_9);
 
                         }
 			else if (hours < 12) {
@@ -219,8 +227,12 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(255, 0, 0)",
                                                 weight: 1.5,
-                                                radius: getRadius(hours)
-                                        }).addTo(layers.HOURS_9_12);
+                                                radius: getRadius(12)
+                                        }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
+                                                "</h3><hr><p>" + pstDate +
+						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
+                                                '<br>' + "Incident Name: " + monthFeatures[i].properties.IncidentName +
+                                                '<br>' + '[' + coordinates[1] + ', ' + coordinates[0] + ']' + "</p>").addTo(layers.HOURS_9_12);
 
                         }
 			else if (hours < 15) {
@@ -230,8 +242,12 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(0, 0, 0)",
                                                 weight: 1.5,
-                                                radius: getRadius(hours)
-                                        }).addTo(layers.HOURS_12_15);
+                                                radius: getRadius(12)
+                                        }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
+                                                "</h3><hr><p>" + pstDate +
+						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
+                                                '<br>' + "Incident Name: " + monthFeatures[i].properties.IncidentName +
+                                                '<br>' + '[' + coordinates[1] + ', ' + coordinates[0] + ']' + "</p>").addTo(layers.HOURS_12_15);
 
                         }
 			else if (hours < 18) {
@@ -241,8 +257,12 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(0, 128, 0)",
                                                 weight: 1.5,
-                                                radius: getRadius(hours)
-					}).addTo(layers.HOURS_15_18);
+                                                radius: getRadius(12)
+					}).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
+                                                "</h3><hr><p>" + pstDate +
+						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
+                                                '<br>' + "Incident Name: " + monthFeatures[i].properties.IncidentName +
+                                                '<br>' + '[' + coordinates[1] + ', ' + coordinates[0] + ']' + "</p>").addTo(layers.HOURS_15_18);
 
 			}
 			else if (hours < 21) {
@@ -252,8 +272,12 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(107, 142, 35)",
                                                 weight: 1.5,
-                                                radius: getRadius(hours)
-                                        }).addTo(layers.HOURS_18_21);
+                                                radius: getRadius(12)
+                                        }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
+                                                "</h3><hr><p>" + pstDate +
+						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
+                                                '<br>' + "Incident Name: " + monthFeatures[i].properties.IncidentName +
+                                                '<br>' + '[' + coordinates[1] + ', ' + coordinates[0] + ']' + "</p>").addTo(layers.HOURS_18_21);
 
                         }
 			else {
@@ -263,9 +287,11 @@ d3.json(url).then(function(response) {
                                                 //fillColor: getColor(hours),
                                                 color: "rgb(150, 128, 114)",
                                                 weight: 4.5,
-                                                radius: getRadius(hours)
+                                                radius: getRadius(6)
                                         }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
                                                 "</h3><hr><p>" + pstDate +
+						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
+                                                '<br>' + "Incident Name: " + monthFeatures[i].properties.IncidentName +
                                                 '<br>' + '[' + coordinates[1] + ', ' + coordinates[0] + ']' + "</p>").addTo(layers.HOURS_21_24);
                         }
 		
@@ -278,7 +304,7 @@ d3.json(url).then(function(response) {
                                                 fillColor: getColor(months),
                                                 color: "black",
                                                 weight: 0.5,
-                                                radius: getRadius(hours)
+                                                radius: getRadius(12)
                                         }).addTo(layers.MONTHS_1_3);
                         }
                         else if (months < 6) {
@@ -288,7 +314,7 @@ d3.json(url).then(function(response) {
                                                 fillColor: getColor(months),
                                                 color: "violet",
                                                 weight: 1.5,
-                                                radius: getRadius(hours)
+                                                radius: getRadius(12)
                                         }).addTo(layers.MONTHS_3_6);
 
                         }
@@ -299,9 +325,11 @@ d3.json(url).then(function(response) {
                                                 fillColor: getColor(months),
                                                 color: "blue",
                                                 weight: 1.5,
-                                                radius: getRadius(hours)
+                                                radius: getRadius(12)
                                         }).bindPopup("<h3>" + "County: " + monthFeatures[i].properties.POOCounty +
                                 		"</h3><hr><p>" + pstDate +
+						'<br>' + "Fire Cause: " + monthFeatures[i].properties.FireCause +
+                                                '<br>' + "Incident Name: " + monthFeatures[i].properties.IncidentName +
                                 		'<br>' + '[' + coordinates[1] + ', ' + coordinates[0] + ']' + "</p>").addTo(layers.MONTHS_6_9);
 
                         }
@@ -312,7 +340,7 @@ d3.json(url).then(function(response) {
                                                 fillColor: getColor(months),
                                                 color: "red",
                                                 weight: 2.5,
-                                                radius: getRadius(hours)
+                                                radius: getRadius(12)
                                         }).addTo(layers.MONTHS_9_12);
 
                         }
