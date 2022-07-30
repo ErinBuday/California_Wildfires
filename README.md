@@ -1,4 +1,4 @@
-# California Wildfire Study
+# California Wildfires Study
 ![Wildfire Image](https://images.pexels.com/photos/3552472/pexels-photo-3552472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
 - - -
 <img width="1130" alt="Screen Shot 2022-07-25 at 8 05 03 PM" src="https://user-images.githubusercontent.com/100361900/180897420-898db16b-b078-4226-84d9-4ca53348b98c.png">
@@ -6,9 +6,11 @@
 
 ![image](https://user-images.githubusercontent.com/100361900/180901351-e93ad281-6ceb-49bf-bb8e-500371efaf7d.png)
 
-## Applications
+# Applications
 
+* MongoDB
 * Plot.ly
+* Pandas
 * Javascript
 * HTML & CSS
 * D3.js
