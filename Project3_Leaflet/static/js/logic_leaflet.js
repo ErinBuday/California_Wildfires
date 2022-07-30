@@ -40,7 +40,7 @@ var layers = {
 // Create map object
 var myMap = L.map("map", {
         center: [37.09, -120.71],
-        zoom: 6,
+        zoom: 5.5,
 	layers: [layers.HOURS_1_3, layers.HOURS_3_6, layers.HOURS_6_9, layers.HOURS_9_12, layers.HOURS_12_15, layers.HOURS_15_18, layers.HOURS_18_21,
 		layers.HOURS_21_24, layers.MONTHS_1_3, layers.MONTHS_3_6, layers.MONTHS_6_9, layers.MONTHS_9_12] 
 });
@@ -351,7 +351,7 @@ d3.json(url).then(function(response) {
 	};
 
 	// Legend Section getColor(grades[i])
-	var legend = L.control({position: 'bottomright'});
+	var legend = L.control({position: 'bottomleft'});
         legend.onAdd = function(myMap) {
 
         	var div = L.DomUtil.create('div', 'info legend'),
@@ -369,7 +369,7 @@ d3.json(url).then(function(response) {
 	};
         legend.addTo(myMap);
 
-	var legend1 = L.control({position: 'bottomleft'});
+	var legend1 = L.control({position: 'bottomright'});
         legend1.onAdd = function(myMap) {
 
                 var div = L.DomUtil.create('div', 'info legend'),
